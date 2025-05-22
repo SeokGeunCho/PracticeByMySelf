@@ -62,7 +62,7 @@ h2 {
 }
 
 .inputGroup.valid input {
-  border-color: var(--primaryColor);
+  border-color: var(--primaryColor) ;
   /* 테두리 색깔이 초록색 */
   /* .valid는 자바스크립트로 가상의 css선택자를 설정한다. */
   /* var(--primaryColor) => green; */
