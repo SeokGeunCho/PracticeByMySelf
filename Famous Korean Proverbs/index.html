@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!-- HTML5 문서라는 걸 알려주는 코드예요 -->
+
+<html lang="ko">
+  <!-- 이 문서의 언어는 한국어예요 -->
+
+  <head>
+    <!-- 화면에 보이지 않지만 중요한 설정들을 적는 곳이에요 -->
+
+    <meta charset="UTF-8" />
+    <!-- 한글이 깨지지 않도록 글자 인코딩 설정이에요 -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 스마트폰에서도 잘 보이도록 화면 크기 조절 설정이에요 -->
+
+    <title>한국어 명언</title>
+    <!-- 웹 브라우저 탭에 보이는 제목이에요 -->
+  </head>
+
+  <body>
+    <!-- 여기부터 화면에 실제로 보이는 내용이에요 -->
+
+    <h1>한국어 명언</h1>
+    <!-- 가장 큰 제목이에요. 화면 위쪽에 크게 나와요 -->
+
+    <link rel="stylesheet" href="style.css" />
+    <!-- 디자인을 예쁘게 해주는 CSS 파일을 연결했어요 -->
+
+    <div id="quoteContainer" class="quoteContainer"></div>
+    <!-- 명언을 보여줄 영역이에요. 나중에 자바스크립트가 여기 내용을 채워줘요 -->
+
+    <span id="quote"></span>
+    <!-- 실제 명언 문장이 나오는 곳이에요 -->
+
+    <div id="quoteButtons">
+      <!-- 버튼들을 모아놓는 상자예요 -->
+
+      <button id="nextQuote">다음</button>
+      <!-- 누르면 새로운 명언이 나와요 -->
+
+      <button id="selectQuote">선택</button>
+      <!-- 지금 보이는 명언을 즐겨찾기로 저장해요 -->
+    </div>
+
+    <div id="loader" style="display: none">로딩중..</div>
+    <!-- 명언을 불러오는 동안 보여주는 메시지예요. 기본은 숨겨져 있어요 -->
+
+    <div id="quotePick">
+      <!-- 즐겨찾기 명언을 보여줄 영역이에요 -->
+
+      <h3>즐겨찾기 명언</h3>
+      <!-- 작은 제목이에요 -->
+
+      <ul id="quotePickList"></ul>
+      <!-- 즐겨찾기한 명언들이 하나씩 <li>로 여기 들어갈 거예요 -->
+    </div>
+
+    <script src="script.js"></script>
+    <!-- 자바스크립트 파일을 연결해요. 명언 가져오기, 버튼 작동 같은 일을 처리해요 -->
+  </body>
+</html>
