@@ -46,3 +46,12 @@
         </div>
     </div>
 </nav>
+
+<!-- 1. msg 사용 범위 설정-->
+{{#msg}}
+    <!-- 2. 메시지 창 작성-->
+    <div class="alert alert-info" role="alert">
+        {{msg}}
+        <button type="button" class="btn-close btn-close-white" disabled aria-label="Close"></button>
+    </div>
+{{/msg}}
