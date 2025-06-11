@@ -1,18 +1,10 @@
 server:
-  port: 8081  # ? ???????? ?? ??? ?
+  port: 8081
 
 spring:
   application:
     name: study-service
 
-  # ? ??? MySQL ?? - ?? DB ???? ???
-  # datasource:
-  #   url: jdbc:mysql://localhost:3306/studydb
-  #   driver-class-name: com.mysql.cj.jdbc.Driver
-  #   username: root
-  #   password: mysql1
-
-  # ? ??? H2 ???? DB? ??
   datasource:
     url: jdbc:h2:mem:testdb
     driver-class-name: org.h2.Driver
@@ -26,3 +18,21 @@ spring:
     properties:
       hibernate:
         format_sql: true
+
+# ================================================================
+# If you use MySQL later, unannotate the settings below
+# ================================================================
+
+#  datasource:
+#    url: jdbc:mysql://localhost:3306/studydb
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    username: root
+#    password: mysql1
+#
+#  jpa:
+#    hibernate:
+#      ddl-auto: update
+#    show-sql: true
+#    properties:
+#      hibernate:
+#        format_sql: true
