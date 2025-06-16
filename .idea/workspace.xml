@@ -2,7 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="900d4981-2201-4334-827d-7e9025d6b2b3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/3rd_project/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/3rd_project/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/3rd_project/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/3rd_project/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/3rd_project/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/3rd_project/.idea/3rd_project.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/3rd_project/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/3rd_project/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/3rd_project/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/3rd_project/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/3rd_project/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/3rd_project/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/3rd_project/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/3rd_project/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/3rd_project/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/3rd_project/src/main/java/com/example/studyservice/StudyserviceApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/3rd_project/src/main/java/com/example/studyservice/controller/StudyController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/3rd_project/src/main/java/com/example/studyservice/domain/Study.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/3rd_project/src/main/java/com/example/studyservice/domain/StudyStatus.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/3rd_project/src/main/java/com/example/studyservice/dto/StudyCreateRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/3rd_project/src/main/java/com/example/studyservice/dto/StudyResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/3rd_project/src/main/java/com/example/studyservice/dto/StudyUpdateRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/3rd_project/src/main/java/com/example/studyservice/exception/StudyNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/3rd_project/src/main/java/com/example/studyservice/repository/StudyRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/3rd_project/src/main/java/com/example/studyservice/service/StudyService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/3rd_project/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/3rd_project/src/test/java/com/example/studyservice/StudyserviceApplicationTests.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,16 +43,16 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -47,6 +71,7 @@
       <updated>1749454521195</updated>
       <workItem from="1749454522429" duration="2000" />
       <workItem from="1749645386291" duration="5000" />
+      <workItem from="1749816236085" duration="2000" />
     </task>
     <servers />
   </component>
