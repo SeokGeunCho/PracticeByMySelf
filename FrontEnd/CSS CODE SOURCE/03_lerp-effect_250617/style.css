@@ -1,0 +1,8 @@
+/* 마우스를 따라다니는 핑크색 원 */
+#circle {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: hotpink;
+}
