@@ -1,0 +1,52 @@
+/* 전체 페이지 중앙 정렬 및 배경 설정 */
+html,
+body {
+  display: flex; /* 플렉스박스 사용 */
+  flex-direction: column; /* 세로 정렬 */
+  align-items: center; /* 가로 중앙 정렬 */
+  justify-content: center; /* 세로 중앙 정렬 */
+  width: 100%; /* 너비 100% */
+  height: 100%; /* 높이 100% */
+  background-color: #252a34; /* 어두운 남색 배경 */
+}
+
+/* 버튼 기본 스타일 */
+button {
+  font-family: roboto; /* 글꼴 지정 */
+  letter-spacing: 1px; /* 글자 간격 */
+  padding: 1rem 5rem; /* 내부 여백 */
+  border-radius: 9px; /* 둥근 테두리 */
+  font-size: 1.5rem; /* 글자 크기 */
+  color: #eaeaea; /* 글자 색 (밝은 회색) */
+  font-weight: bold; /* 굵은 글씨 */
+  background-color: #ff2e63; /* 버튼 배경색 (진한 핑크) */
+  box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.5); /* 그림자 효과 */
+  border: none; /* 테두리 제거 */
+  cursor: pointer; /* 마우스 올렸을 때 포인터 모양 */
+  position: relative; /* after 요소의 위치 기준점 */
+  overflow: hidden; /* 내부에서 넘치는 효과 감추기 */
+  --a: initial; /* 커스텀 속성: 애니메이션 초기화 */
+}
+
+/* 버튼 클릭 시 실행되는 가상 요소 (물결 효과) */
+button:after {
+  content: ""; /* 내용 없음 */
+  position: absolute; /* 절대 위치 */
+  top: var(--top); /* JS에서 설정한 클릭 위치 Y */
+  left: var(--left); /* JS에서 설정한 클릭 위치 X */
+  width: var(--diameter); /* JS에서 설정한 원 크기 */
+  height: var(--diameter);
+  transform: scale(0); /* 초기에는 크기 0 */
+  background-color: rgba(255, 255, 255, 0.4); /* 반투명 흰색 */
+  border-radius: 50%; /* 완전한 원 */
+  pointer-events: none; /* 클릭 이벤트 막음 */
+  animation: var(--a); /* JS에서 지정한 애니메이션 실행 */
+}
+
+/* ripple-effect 애니메이션 정의 */
+@keyframes ripple-effect {
+  100% {
+    transform: scale(1); /* 원을 점점 키움 */
+    opacity: 0; /* 완전히 사라짐 */
+  }
+}

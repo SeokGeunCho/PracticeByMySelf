@@ -1,0 +1,57 @@
+<!-- HTML5 문서임을 선언 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- 문자 인코딩 설정 -->
+    <meta charset="UTF-8" />
+    <title>button ripple effect</title>
+    <!-- 탭에 표시될 제목 -->
+
+    <!-- CSS 초기화 스타일 (브라우저 기본 스타일 제거) -->
+    <link rel="stylesheet" type="text/css" href="reset.css" />
+    <!-- 커스텀 스타일 연결 -->
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <!-- 버튼 요소, 클릭 시 물결 효과 발생 -->
+    <button id="btn1">CLICK</button>
+
+    <script>
+      // 버튼 요소를 가져옴
+      const btn = document.getElementById("btn1");
+
+      // 클릭 이벤트 핸들러 함수 정의
+      const onClick = (e) => {
+        // 버튼의 위치와 크기를 가져옴
+        const { x, y, width, height } = btn.getBoundingClientRect();
+
+        // 대각선 길이 계산 → 원의 반지름
+        const radius = Math.sqrt(width * width + height * height);
+
+        // 커스텀 CSS 변수 --diameter에 지름 설정 (원의 크기)
+        btn.style.setProperty("--diameter", radius * 2 + "px");
+
+        // 클릭한 위치 좌표 계산 (클릭 이벤트 기준 위치)
+        const { clientX, clientY } = e;
+
+        // 버튼 내부에서 클릭된 위치를 퍼센트(%)로 변환
+        const left = ((clientX - x - radius) / width) * 100 + "%";
+        const top = ((clientY - y - radius) / height) * 100 + "%";
+
+        // ripple 위치 설정
+        btn.style.setProperty("--left", left);
+        btn.style.setProperty("--top", top);
+
+        // 애니메이션 초기화 후 다시 실행하기 위한 트릭
+        btn.style.setProperty("--a", ""); // 초기화
+        setTimeout(() => {
+          // 5ms 후에 다시 애니메이션 속성 적용 → 강제 재실행
+          btn.style.setProperty("--a", "ripple-effect 500ms linear");
+        }, 5);
+      };
+
+      // 버튼에 클릭 이벤트 등록
+      btn.addEventListener("click", onClick);
+    </script>
+  </body>
+</html>

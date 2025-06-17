@@ -1,16 +1,25 @@
+<!-- HTML5 문서임을 선언 -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- 문자 인코딩 설정: 한글 포함 다양한 문자 지원 -->
     <meta charset="UTF-8" />
-    <title>CSS text hover effect 1</title>
+    <title>text-effect</title> <!-- 브라우저 탭에 표시될 제목 -->
+
+    <!-- CSS 리셋 파일 연결: 브라우저 기본 스타일 제거 -->
     <link rel="stylesheet" type="text/css" href="reset.css" />
+
+    <!-- 실제 스타일이 정의된 CSS 파일 연결 -->
     <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
+
   <body>
-    <span class="left">ABOUT</span>
-    <span class="right">WORKS</span>
-    <span class="top">PRODUCT</span>
-    <span class="bottom">BLOG</span>
-    <span class="center">CONTACT</span>
+    <!-- 각각의 span은 텍스트 요소이며, 클래스명에 따라 hover 시 효과 방향이 다름 -->
+    
+    <span class="left">ABOUT</span>     <!-- 왼쪽에서 텍스트가 채워지는 효과 -->
+    <span class="right">WORKS</span>    <!-- 오른쪽에서 텍스트가 채워지는 효과 -->
+    <span class="top">PRODUCT</span>    <!-- 위쪽에서 텍스트가 채워지는 효과 -->
+    <span class="bottom">BLOG</span>    <!-- 아래쪽에서 텍스트가 채워지는 효과 -->
+    <span class="center">CONTACT</span> <!-- 중앙에서 바깥으로 퍼지는 효과 -->
   </body>
 </html>
