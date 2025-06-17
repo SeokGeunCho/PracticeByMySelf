@@ -62,7 +62,7 @@ h2 {
 }
 
 .inputGroup.valid input {
-  border-color: var(--primaryColor) ;
+  border-color: var(--primaryColor);
   /* 테두리 색깔이 초록색 */
   /* .valid는 자바스크립트로 가상의 css선택자를 설정한다. */
   /* var(--primaryColor) => green; */
@@ -76,28 +76,34 @@ h2 {
   visibility: visible;
 }
 
+/* 📌 helperText(도움말 텍스트) 기본 스타일 */
 .inputGroup .helperText {
-  display: block;
-  padding-top: 8px;
+  display: block; /* 줄 바꿈을 강제로 하여 블록 요소로 표시 */
+  padding-top: 8px; /* 위쪽에 8px 간격을 줌 */
 }
 
+/* 📌 유효한 입력일 때 helperText는 숨김 처리 */
 .inputGroup.valid .helperText {
-  visibility: hidden;
+  visibility: hidden; /* 화면에는 남아 있지만 보이지 않게 처리 (레이아웃은 유지) */
 }
 
+/* 📌 유효하지 않은 입력일 때 helperText에 에러 색상 적용 */
 .inputGroup.invalid .helperText {
-  color: var(--errorColor);
+  color: var(--errorColor); /* CSS 변수 errorColor를 텍스트 색상으로 사용 */
 }
 
+/* 📌 등록 버튼 스타일 */
 #wrapper button {
-  display: block;
-  width: 85%;
-  margin: 0 auto;
-  height: 50px;
-  margin-bottom: 25px;
-  font-size: 18px;
-  background-color: var(--primaryColor);
-  border: 2px solid var(--primaryColor);
-  color: white;
-  cursor: pointer;
+  display: block; /* 한 줄 전체를 차지하는 블록 요소로 표시 */
+  width: 85%; /* 버튼 너비를 wrapper 기준 85%로 설정 */
+  margin: 0 auto; /* 좌우 자동 마진으로 가운데 정렬 */
+  height: 50px; /* 버튼 높이 지정 */
+  margin-bottom: 25px; /* 아래쪽 여백 25px */
+  font-size: 18px; /* 글자 크기 */
+  background-color: var(
+    --primaryColor
+  ); /* 배경색: CSS 변수 primaryColor 사용 */
+  border: 2px solid var(--primaryColor); /* 테두리: 같은 색상으로 2px */
+  color: white; /* 글자색: 흰색 */
+  cursor: pointer; /* 마우스 오버 시 손가락 커서로 변경 */
 }

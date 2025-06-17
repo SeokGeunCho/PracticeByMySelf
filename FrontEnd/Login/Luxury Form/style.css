@@ -1,0 +1,153 @@
+/* 기본 스타일 초기화 */
+* {
+  box-sizing: border-box; /* 박스 크기 계산 기준을 테두리까지 포함하도록 설정 */
+  font-family: "Noto Sans KR", sans-serif; /* 폰트를 Noto Sans KR로 설정 */
+}
+
+html,
+body {
+  margin: 0; /* 바깥 여백 제거 */
+  padding: 0; /* 안쪽 여백 제거 */
+}
+
+/* 전체 화면을 덮는 커버 영역 스타일 */
+.login-cover {
+  position: fixed; /* 화면에 고정 */
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3); /* 반투명한 검은 배경 */
+}
+
+/* 로그인 박스 영역 스타일 */
+.login-cover > .login-wrapper {
+  background: #513e30; /* 배경색 */
+  color: #c9b584; /* 텍스트 색 */
+  position: absolute; /* 화면 중앙 배치 위해 절대 위치 */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); /* 정확한 중앙 정렬 */
+  font-size: 30px;
+  padding: 1em;
+  box-shadow: 0.35em 0.5em 0 0 black; /* 그림자 효과 */
+  width: 15em; /* 박스 너비 고정 */
+}
+
+/* "LOGIN" 제목 부분 스타일 */
+.login-cover > .login-wrapper > .row.header {
+  font-size: 2em;
+  margin: 0.5em 0;
+  text-align: center; /* 가운데 정렬 */
+  letter-spacing: 0.25em; /* 자간(글자 간격) */
+  color: #fae37d; /* 강조색 */
+}
+
+/* 각 입력 행의 공통 스타일 */
+.login-cover > .login-wrapper > .row {
+  margin: 1em 0;
+  position: relative; /* 자식 요소(라벨 등)의 위치 기준 */
+}
+
+/* 입력창(input)과 버튼 스타일 */
+.login-cover > .login-wrapper input,
+.login-cover > .login-wrapper button[type="submit"] {
+  width: 100%; /* 가로 100% */
+  font: inherit; /* 상속받은 폰트 사용 */
+  background: inherit; /* 배경색 상속 */
+  color: inherit; /* 글자색 상속 */
+  border: none; /* 테두리 제거 */
+  outline: none; /* 포커스 테두리 제거 */
+  padding: 0.5em 0.25em; /* 안쪽 여백 설정 */
+}
+
+/* 로그인 버튼 기본 스타일 */
+.login-cover > .login-wrapper button[type="submit"] {
+  border: 0.1em solid #c9b584; /* 테두리 추가 */
+  letter-spacing: 0.1em; /* 자간 */
+  cursor: pointer; /* 마우스 커서를 손 모양으로 */
+}
+
+/* 입력창 위에 떠 있는 라벨 스타일 */
+.login-cover > .login-wrapper label {
+  position: absolute;
+  left: 0.25em;
+  top: 0.5em;
+  font: inherit;
+  z-index: -1; /* 기본 상태에선 입력창 아래에 위치 */
+}
+
+/* 입력창 하단에 있는 강조 선 스타일 */
+.login-cover > .login-wrapper .highlight {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 0.1em;
+  background: #c9b584; /* 연한 금색 */
+}
+
+/* 라벨과 강조선에 부드러운 전환 효과 적용 */
+.login-cover > .login-wrapper label,
+.login-cover > .login-wrapper .highlight {
+  transition: all 0.2s ease-out;
+}
+
+/* 입력창에 포커스되거나 값이 있을 때 라벨 위치 변경 */
+.login-cover > .login-wrapper input:focus + label,
+.login-cover > .login-wrapper input:valid + label {
+  left: 0.25em;
+  top: -0.75em; /* 위로 이동 */
+  font-size: 0.75em; /* 크기 축소 */
+  background: #513e30; /* 배경색 설정 (겹침 방지) */
+  z-index: 1;
+  color: #fae37d; /* 강조색 */
+}
+
+/* 입력 포커스 또는 입력값이 있을 때 강조선 애니메이션 준비 */
+.login-cover > .login-wrapper input:focus ~ .highlight,
+.login-cover > .login-wrapper input:valid ~ .highlight {
+  /* 여기에 색상 변경 등 추가 가능 */
+}
+
+/* 로그인 버튼의 배경 그라데이션 효과 */
+.login-cover > .login-wrapper button[type="submit"] {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(201, 181, 132, 0) 25%,
+    rgba(226, 204, 129, 0.75) 40%,
+    rgba(250, 227, 125, 1) 50%,
+    rgba(226, 204, 129, 0.75) 60%,
+    rgba(255, 255, 255, 0) 75%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background-size: 500%; /* 그라데이션 크기 */
+  background-position: 0 0;
+  transition: background 0.5s ease-out;
+}
+
+/* 로그인 버튼에 마우스를 올리면 배경 위치 이동 및 색상 변경 */
+.login-cover > .login-wrapper button[type="submit"]:hover {
+  border-color: #fae37d;
+  color: #fae37d;
+  background-position: 100% 0;
+}
+
+/* 강조선에 애니메이션 효과를 주기 위한 after 가상 요소 정의 */
+.login-cover > .login-wrapper.highlight::after {
+  content: ""; /* 필수 속성 */
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 0.1em;
+  right: 100%; /* 처음엔 안 보이도록 설정 */
+  background: #fae37d; /* 강조선 색상 */
+  transition: right 0.2s ease-out;
+}
+
+/* 입력창 포커스 또는 입력값이 있으면 강조선이 나타남 */
+.login-cover > .login-wrapper input:focus ~ .highlight::after,
+.login-cover > .login-wrapper input:valid ~ .highlight::after {
+  right: 0; /* 오른쪽 끝까지 표시 */
+}

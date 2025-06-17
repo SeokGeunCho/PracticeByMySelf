@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" /> <!-- 문자 인코딩 설정: UTF-8 (한글 포함 전 세계 문자 지원) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 모바일 및 반응형 웹을 위한 뷰포트 설정 -->
+
+    <title>회원등록</title> <!-- 브라우저 탭 제목 -->
+
+    <link rel="stylesheet" href="style.css" />
+    <!-- 외부 CSS 파일(style.css) 연결 -->
+  </head>
+
+  <body>
+    <!-- 전체 폼을 감싸는 wrapper -->
+    <div id="wrapper" class="wrapper">
+      
+      <!-- 회원가입 폼 -->
+      <form id="registrationForm" class="registrationForm">
+        <h2>회원등록</h2> <!-- 페이지 제목 -->
+
+        <!-- 사용자이름 입력 영역 -->
+        <div class="inputGroup">
+          <label for="nickname">사용자이름</label>
+          <!-- label: 입력창과 연결된 텍스트 설명 (id와 연결됨) -->
+          <input type="text" id="nickname" class="nicknameInput" />
+          <!-- 사용자 이름 입력 필드 -->
+          <span class="helperText">알림</span>
+          <!-- 부가 설명 또는 경고 메시지 영역 -->
+        </div>
+
+        <!-- 이메일 입력 영역 -->
+        <div class="inputGroup">
+          <label for="userEmail">이메일주소</label>
+          <input type="email" id="email" class="emailInput" />
+          <!-- 이메일 형식 입력 필드 -->
+          <span class="helperText">알림</span>
+        </div>
+
+        <!-- 비밀번호 입력 영역 -->
+        <div class="inputGroup">
+          <label for="userPassword">비밀번호</label>
+          <input type="password" id="userPassword" class="passwordInput" />
+          <!-- 비밀번호 입력 필드 -->
+          <span class="helperText">알림</span>
+        </div>
+
+        <!-- 비밀번호 확인 입력 영역 -->
+        <div class="inputGroup">
+          <label for="confirmPassword">비밀번호 확인</label>
+          <input
+            type="password"
+            id="confirmPassword"
+            class="confirmPasswordInput"
+          />
+          <span class="helperText">알림</span>
+        </div>
+
+        <!-- 전화번호 입력 영역 -->
+        <div class="inputGroup">
+          <label for="phone">전화번호</label>
+          <input type="tel" id="phone" class="phoneInput" />
+          <!-- 전화번호 입력 필드 -->
+          <span class="helperText">예:010-1234-5678</span>
+        </div>
+
+        <!-- 제출 버튼 -->
+        <button type="submit">등록완료</button>
+        <!-- 회원가입 제출 버튼 / 백엔드와 연결될 때 중요 -->
+
+        <!-- 
+          ※ 참고 설명
+          프론트엔드에서 백엔드로 데이터를 보낼 땐 button의 type을 반드시 명시해야 한다.
+          기본은 "submit"이며, form과 함께 서버로 요청이 전송됨.
+        -->
+      </form>
+
+      <!-- 
+        form 태그는 입력값(input)들을 하나로 묶어
+        웹브라우저(프론트엔드)에서 서버(백엔드)로 데이터를 전송할 때 사용한다.
+      -->
+    </div>
+
+    <!-- 
+      div는 '영역'을 나누는 기본적인 태그로,
+      내부에 콘텐츠가 들어가기 전까진 실제 공간을 차지하지 않음.
+    -->
+
+    <!-- JavaScript 코드 연결 -->
+    <script src="script.js"></script>
+  </body>
+</html>
