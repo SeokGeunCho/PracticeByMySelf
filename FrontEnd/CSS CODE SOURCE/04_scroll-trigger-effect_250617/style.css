@@ -108,7 +108,7 @@ body {
   margin: 0 auto;
   position: relative;
   overflow: hidden;
-  background-color: #111606;
+  background: #111606;
 }
 img {
   filter: brightness(50%);
