@@ -1,0 +1,296 @@
+@charset "utf-8";
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@500;600&family=Manrope&family=Noto+Sans+KR:wght@400;500&display=swap");
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+li {
+  list-style: none;
+}
+address,
+em,
+i {
+  font-style: normal;
+}
+button {
+  background: none;
+  border: none;
+}
+img {
+  vertical-align: middle;
+}
+
+/* Layout */
+.en {
+  font-family: "kanit", sans-serif;
+  font-weight: 600;
+}
+.en2 {
+  font-family: "Manrope", sans-serif;
+  font-weight: 400;
+}
+
+body {
+  font-family: "MonumentGrotesk", sans-serif;
+  font-size: 0.85vw;
+  font-weight: 400;
+  background: #111606;
+}
+.wrap {
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  background: #111606;
+  margin-bottom: 500px;
+}
+img {
+  filter: brightness(50%);
+}
+
+/* Visual */
+.visual {
+  position: relative;
+  padding: 0;
+  overflow: hidden;
+}
+.visual img {
+  width: 100%;
+}
+.visual h1 {
+  font-size: 9vw;
+  color: #fff;
+  position: absolute;
+  left: 50%;
+  top: 32%;
+  transform: translateX(-50%);
+  line-height: 1;
+  width: 60%;
+  font-weight: 400;
+  line-height: 1;
+  opacity: 0;
+}
+.visual h1 span {
+  display: block;
+  letter-spacing: -2px;
+  font-size: 5vw;
+  -webkit-text-stroke: 2px #b1dd40;
+  color: transparent;
+}
+
+section {
+  padding: 50px 0;
+}
+section .inner {
+  width: 80%;
+  margin: 0 auto;
+}
+.infoProject .inner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.infoProject .inner .imgBox {
+  width: 70%;
+}
+.infoProject .inner .imgBox img {
+  width: 100%;
+}
+.infoProject .inner .textBox {
+  width: 25%;
+}
+.infoProject .inner .textBox span {
+  display: block;
+  line-height: 1.6;
+  color: #fff;
+}
+.infoProject .inner .textBox span.title {
+  color: #b1dd40;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.infoProject .inner .textBox .text {
+  margin-bottom: 30px;
+}
+
+/* concept */
+.concept {
+  padding-bottom: 100px;
+}
+.concept ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.concept ul li {
+  width: 28%;
+  margin-top: 200px;
+}
+.concept ul li:nth-child(2) {
+  margin-top: 0;
+}
+.concept ul li img {
+  width: 100%;
+}
+
+.concept ul.size {
+  margin-top: 150px;
+}
+.concept ul.size li:nth-child(1) {
+  width: 32%;
+  margin-left: 20%;
+}
+.concept ul.size li:nth-child(2) {
+  width: 40%;
+  margin-top: -50px;
+}
+.concept ul.size li:nth-child(3) {
+  width: 65%;
+  margin-left: 10%;
+}
+.concept .textBox {
+  position: relative;
+  padding-top: 10%;
+}
+.concept .textBox .title {
+  font-size: 8vw;
+  -webkit-text-stroke: #b1dd40 2px;
+  color: transparent;
+  position: absolute;
+  left: 10%;
+  top: -30%;
+}
+.concept .textBox span {
+  line-height: 1.6;
+  color: #fff;
+  display: block;
+  font-size: 1.5vw;
+}
+.concept .textBox.size .title {
+  font-size: 4.5vw;
+  line-height: 1;
+  left: 0;
+}
+.concept .textBox.size .title b {
+  font-weight: 400;
+  color: #fff;
+  -webkit-text-stroke: 0;
+  display: block;
+}
+
+/* imgbox 에 active 클래스가 붙을 때 */
+.imgBox {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s;
+}
+.imgBox::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #b1dd40;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: all 0.8s;
+  transition-delay: 0.4s;
+  z-index: 2;
+}
+.imgBox::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #111606;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: all 0.8s;
+  z-index: 3;
+}
+.imgBox.active::before {
+  height: 0;
+}
+.imgBox.active::after {
+  height: 0;
+}
+
+/* textBox active 클래스가 붙을 때 */
+.textBox span {
+  margin: 50px 0;
+  transition: all 0.8s;
+  opacity: 0;
+}
+.textBox.active span {
+  margin: 0;
+  opacity: 1;
+}
