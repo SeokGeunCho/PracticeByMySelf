@@ -13,8 +13,10 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @Builder
 public class Employee {
+
     @Id
     private String empNo;
+
     private String empName;
     private String deptCode;
     private String empEmail;
